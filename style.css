@@ -1,0 +1,159 @@
+* {
+  font-family: Arial, "Free Sans", "Nimbus Sans", Helvetica, sans-serif;
+}
+
+.menu_pane, .game_pane {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.title_pane {
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.title_pane p.author {
+  text-align: center;
+  font-size: 80%;
+  color: #555;
+}
+
+.menu_text {
+  text-align: center;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.menu_buttons, .game_menu_pane, .game_menu_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.menu_button, .go_back_button, .again_button {
+  padding: 3px 15px;
+  font-size: 150%;
+  min-width: 8%;
+}
+
+.instruction_pane {
+  text-align: center;
+}
+
+.game_result_pane {
+  font-size: 250%;
+  font-weight: bold;
+  border: 2px solid #777;
+  padding: 3px 15px;
+  text-align: center;
+  background-color: #bbd;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.board_pane {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.board_pane .center_obj {
+  margin: auto;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  border: 0px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.empty_cell {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.wall_cell {
+  border: 1px solid black;
+  background-color: black;
+}
+
+.grid td {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.grid tr {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.grid tr.first, .grid tr.last {
+  height: 10px;
+}
+
+.grid td.first, .grid td.last {
+  width: 10px;
+}
+
+.grid tr.odd {
+  height: 5px;
+}
+
+.grid tr.odd td {
+  height: 5px;
+}
+
+.grid td.odd {
+  width: 5px;
+}
+
+.grid td.start_cell {
+  background-color: #0f0 !important;
+}
+
+.grid td.exit_cell {
+  background-color: #f00 !important;
+}
+
+.grid td.active_cell {
+  background-color: #ff0 !important;
+}
+
+.grid td:not(.start_cell):not(.exit_cell):not(.active_cell).visited_cell {
+  background-color: #e7e7f0 !important;
+}
+
+button {
+  border: 2px solid #778;
+  background-color: #dde;
+  color: #005;
+}
+
+button:hover, button:focus {
+  border: 2px dashed #335;
+}
+
+body {
+  background-color: #eef;
+}
